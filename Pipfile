@@ -13,4 +13,7 @@ tomli = "*"
 
 [packages]
 ofxstatement = "*"
-ofxstatement-sample = {editable = true,path = "."}
+openpyxl = "*"
+types-openpyxl = "*"
+typing-extensions = "*"
+ofxstatement-handelsbanken = {editable = true,path = "."}
