@@ -1,7 +1,7 @@
 import os
 
 from ofxstatement.ui import UI
-from datetime import date
+from datetime import datetime
 
 from ofxstatement_handelsbanken.plugin import HandelsbankenPlugin
 
@@ -22,10 +22,11 @@ def test_handelsbanken() -> None:
     assert len(statement.lines) == 2
     stmt_line1, stmt_line2 = statement.lines
 
+    print(f"{stmt_line1=}")
     assert stmt_line1.memo == "blipp"
-    assert stmt_line1.amount == -238
-    assert stmt_line1.date == date(2025, 1, 2)
+    assert stmt_line1.amount == -238.0
+    assert stmt_line1.date == datetime(2025, 1, 2, 0, 0)
 
     assert stmt_line2.memo == "blupp"
-    assert stmt_line2.amount == -228
-    assert stmt_line2.date == date(2025, 1, 2)
+    assert stmt_line2.amount == -228.0
+    assert stmt_line2.date == datetime(2025, 1, 2, 0, 0)
