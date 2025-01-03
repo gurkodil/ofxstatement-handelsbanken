@@ -11,6 +11,9 @@ Users of ofxstatement have developed several plugins for their banks. They are
 listed on main [ofxstatement](https://github.com/kedder/ofxstatement) site. If
 your bank is missing, you can develop your own plugin.
 
+## Usage
+For instructions on how to use this plugin to convert your Handelsbanken statements, see [User Guide](USAGE.md).
+
 ## Setting up development environment
 
 It is recommended to use `pipenv` to make a clean development environment.
