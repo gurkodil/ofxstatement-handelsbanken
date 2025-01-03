@@ -7,7 +7,6 @@ from ofxstatement_handelsbanken.plugin import HandelsbankenPlugin
 
 
 def test_handelsbanken() -> None:
-    pass
     plugin = HandelsbankenPlugin(UI(), {})
     here = os.path.dirname(__file__)
     sample_filename = os.path.join(here, "transactions.xlsx")
