@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ofxstatement-handelsbanken"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Andrey Lebedev", email="andrey@lebedev.lt" },
   { name="gurkodil", email="18744409+gurkodil@users.noreply.github.com" },
