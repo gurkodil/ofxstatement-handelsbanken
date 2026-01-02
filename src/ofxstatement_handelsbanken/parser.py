@@ -20,6 +20,11 @@ class ExcelStatementParser(StatementParser[List[Any]]):
         sheet = load_workbook(filename=self.filename, read_only=True).active
         if not sheet:
             raise ValueError("Could not read Excel file")
+
+        # FIX: newer files exported from Handelsbanken returns an incorrect XML
+        # range "A1:A1" in their metadata. Resetting dimensions forces openpyxl
+        # to scan the actual file content to find the data boundary
+        sheet.reset_dimensions()
         return sheet
 
     def get_cell_value(self, cell: str) -> Optional[Any]:
